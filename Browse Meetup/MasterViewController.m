@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     _manager = [[MeetupManager alloc] init];
     _manager.communicator = [[MeetupCommunicator alloc] init];
     _manager.communicator.delegate = _manager;

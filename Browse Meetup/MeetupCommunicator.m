@@ -9,14 +9,13 @@
 #import "MeetupCommunicator.h"
 #import "MeetupCommunicatorDelegate.h"
 
-#define API_KEY @"1f5718c16a7fb3a5452f45193232"
-#define PAGE_COUNT 20
+#define API_URL @"http://localhost:8080/indica/schedule"
 
 @implementation MeetupCommunicator
 
 - (void)searchGroupsAtCoordinate:(CLLocationCoordinate2D)coordinate
 {
-    NSString *urlAsString = [NSString stringWithFormat:@"http://localhost:8080/indica/schedule"];
+    NSString *urlAsString = [NSString stringWithFormat: API_URL];
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     NSLog(@"%@", urlAsString);
     
